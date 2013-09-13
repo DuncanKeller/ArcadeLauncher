@@ -8,6 +8,7 @@ using System.Diagnostics;
 namespace ArcadeLauncher
 {
     public delegate void LaunchAction(string name, string emulator);
+    public delegate void NavAction(Menu m);
 
     static class Launch
     {     

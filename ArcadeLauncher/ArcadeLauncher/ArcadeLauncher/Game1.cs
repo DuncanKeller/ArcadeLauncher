@@ -23,6 +23,8 @@ namespace ArcadeLauncher
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
+           
         }
 
         /// <summary>
@@ -34,6 +36,8 @@ namespace ArcadeLauncher
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            Config.Init(Content);
+            MenuManager.Init();
 
             base.Initialize();
         }
@@ -70,6 +74,7 @@ namespace ArcadeLauncher
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            MenuManager.Update(gameTime.ElapsedGameTime.Milliseconds);
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -93,7 +98,9 @@ namespace ArcadeLauncher
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            spriteBatch.Begin();
+            MenuManager.Draw(spriteBatch);
+            spriteBatch.End();
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
