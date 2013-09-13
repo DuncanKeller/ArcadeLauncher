@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcadeLauncher", "ArcadeLauncher\ArcadeLauncher\ArcadeLauncher.csproj", "{7A0F697A-E326-4A1B-91A5-C1AA292FFC0B}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "ArcadeLauncherContent", "ArcadeLauncher\ArcadeLauncherContent\ArcadeLauncherContent.contentproj", "{DF56D829-A668-424F-B721-7E745C80E04B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A0F697A-E326-4A1B-91A5-C1AA292FFC0B}.Debug|x86.ActiveCfg = Debug|x86
+		{7A0F697A-E326-4A1B-91A5-C1AA292FFC0B}.Debug|x86.Build.0 = Debug|x86
+		{7A0F697A-E326-4A1B-91A5-C1AA292FFC0B}.Release|x86.ActiveCfg = Release|x86
+		{7A0F697A-E326-4A1B-91A5-C1AA292FFC0B}.Release|x86.Build.0 = Release|x86
+		{DF56D829-A668-424F-B721-7E745C80E04B}.Debug|x86.ActiveCfg = Debug|x86
+		{DF56D829-A668-424F-B721-7E745C80E04B}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
