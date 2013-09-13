@@ -9,9 +9,10 @@ namespace ArcadeLauncher
 {
     class ConsoleMenu : Menu
     {
-        public ConsoleMenu(NavAction action) : base()
+        public ConsoleMenu(NavAction action)
+            : base()
         {
-            Vector2 pos = new Vector2(25, 25);
+            Vector2 pos = new Vector2(Config.leftMargin, Config.topMargin);
             Vector2 size = new Vector2(300, 100);
             foreach (Console c in Config.consoles)
             {
@@ -19,6 +20,10 @@ namespace ArcadeLauncher
                     c.Name, pos, size, action);
                 items.Add(item);
                 pos.Y += size.Y + 15;
+            }
+            if (items.Count > 0)
+            {
+                items[0].Selected = true;
             }
         }
 

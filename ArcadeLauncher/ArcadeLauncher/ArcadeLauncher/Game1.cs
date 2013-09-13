@@ -36,7 +36,7 @@ namespace ArcadeLauncher
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            Config.Init(Content);
+            Config.Init(Content, graphics.GraphicsDevice);
             MenuManager.Init();
 
             base.Initialize();
@@ -73,10 +73,12 @@ namespace ArcadeLauncher
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
+            Input.Update();
 
             MenuManager.Update(gameTime.ElapsedGameTime.Milliseconds);
             // TODO: Add your update logic here
 
+            Input.LateUpdate();
             base.Update(gameTime);
         }
 
