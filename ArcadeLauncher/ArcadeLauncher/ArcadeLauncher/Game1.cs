@@ -72,7 +72,10 @@ namespace ArcadeLauncher
         {
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
+            {
+                Config.Save();
                 this.Exit();
+            }
             Input.Update();
 
             MenuManager.Update(gameTime.ElapsedGameTime.Milliseconds);
@@ -99,7 +102,7 @@ namespace ArcadeLauncher
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(new Color(136, 212, 129));
             spriteBatch.Begin();
             MenuManager.Draw(spriteBatch);
             spriteBatch.End();

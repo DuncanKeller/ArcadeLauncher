@@ -9,6 +9,7 @@ namespace ArcadeLauncher
     {
         string name;
         string filepath;
+        string filename;
 
         public string Name
         {
@@ -20,10 +21,16 @@ namespace ArcadeLauncher
             get { return filepath; }
         }
 
-        public Console(string name, string filepath)
+        public string FileName
+        {
+            get { return filename; }
+        }
+
+        public Console(string name, string filepath, string filename)
         {
             this.name = name;
             this.filepath = filepath;
+            this.filename = filename;
         }
     }
 }

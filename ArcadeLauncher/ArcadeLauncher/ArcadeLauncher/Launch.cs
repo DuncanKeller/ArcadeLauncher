@@ -24,5 +24,7 @@ namespace ArcadeLauncher
                 p.WaitForExit();
             }
         }
+
+        
     }
 }

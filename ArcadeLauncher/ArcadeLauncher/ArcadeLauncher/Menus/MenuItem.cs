@@ -9,6 +9,9 @@ namespace ArcadeLauncher
 {
     public class MenuItem
     {
+        public static int height = 100;
+        public static int spacing = 15;
+
         protected Vector2 pos;
         protected Vector2 size;
         protected string text;
@@ -50,13 +53,23 @@ namespace ArcadeLauncher
             pos.X += veloc.X;
         }
 
-        public virtual void Draw(SpriteBatch sb)
+        public virtual void Draw(SpriteBatch sb, float offsetX)
         {
-            Rectangle r = new Rectangle((int)pos.X, (int)pos.Y, (int)size.X, (int)size.Y);
-            Vector2 v = new Vector2(pos.X + 10, 
+            Rectangle r = new Rectangle((int)(pos.X + offsetX), (int)pos.Y, (int)size.X, (int)size.Y);
+            Vector2 v = new Vector2(pos.X + 10 + offsetX, 
                 (pos.Y + (size.Y / 2)) - (Config.defaultFont.MeasureString("|").Y / 2));
 
-            sb.Draw(Config.blank, r, new Color(100, 100, 255, 100));
+            Color c = new Color(75, 75, 75, 75);
+
+            if (this is RomMenuItem)
+            {
+                if (Config.favs.Contains((this as RomMenuItem).Rom))
+                {
+                    c = new Color(206, 206, 80, 255);
+                }
+            }
+
+            sb.Draw(Config.blank, r, c);
             sb.DrawString(Config.defaultFont, text, v, Color.White);
         }
 

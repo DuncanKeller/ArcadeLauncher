@@ -13,23 +13,29 @@ namespace ArcadeLauncher
             : base()
         {
             Vector2 pos = new Vector2(Config.leftMargin, Config.topMargin);
-            Vector2 size = new Vector2(300, 100);
+            Vector2 size = new Vector2(Config.screenW - 75, MenuItem.height);
+
+            NavigationMenuItem favItem = new NavigationMenuItem(
+                   "Favorites", pos, size, action, MenuManager.favorites, this);
+            items.Add(favItem);
+            pos.Y += size.Y + MenuItem.spacing;
+
             foreach (Console c in Config.consoles)
             {
                 NavigationMenuItem item = new NavigationMenuItem(
-                    c.Name, pos, size, action);
+                    c.Name, pos, size, action, MenuManager.consoleMenus[c], this);
                 items.Add(item);
-                pos.Y += size.Y + 15;
+                pos.Y += size.Y + MenuItem.spacing;
             }
+
+           
+
             if (items.Count > 0)
             {
                 items[0].Selected = true;
             }
         }
 
-        public void Draw(SpriteBatch sb)
-        {
-            base.Draw(sb);
-        }
+        
     }
 }

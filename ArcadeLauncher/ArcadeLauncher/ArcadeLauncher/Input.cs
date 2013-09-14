@@ -30,5 +30,11 @@ namespace ArcadeLauncher
         {
             oldGps = gps;
         }
+
+        public static void Reset()
+        {
+            gps = Microsoft.Xna.Framework.Input.GamePad.GetState(Microsoft.Xna.Framework.PlayerIndex.One);
+            oldGps = Microsoft.Xna.Framework.Input.GamePad.GetState(Microsoft.Xna.Framework.PlayerIndex.One);
+        }
     }
 }

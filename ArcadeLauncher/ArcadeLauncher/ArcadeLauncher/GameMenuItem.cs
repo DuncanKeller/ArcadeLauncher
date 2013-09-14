@@ -30,10 +30,6 @@ namespace ArcadeLauncher
             action(filename, emulator);
         }
 
-        public void Draw(SpriteBatch sb)
-        {
-            base.Draw(sb);
-        }
         
     }
 }

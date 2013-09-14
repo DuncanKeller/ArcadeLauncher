@@ -73,18 +73,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Config.cs" />
-    <Compile Include="Console.cs" />
-    <Compile Include="ConsoleMenu.cs" />
+    <Compile Include="Menus\Console.cs" />
+    <Compile Include="Menus\ConsoleMenu.cs" />
     <Compile Include="GameMenuItem.cs" />
     <Compile Include="Input.cs" />
     <Compile Include="Launch.cs" />
-    <Compile Include="Menu.cs" />
-    <Compile Include="MenuItem.cs" />
-    <Compile Include="MenuManager.cs" />
-    <Compile Include="NavigationMenuItem.cs" />
+    <Compile Include="Menus\FavoritesMenu.cs" />
+    <Compile Include="Menus\Menu.cs" />
+    <Compile Include="Menus\MenuItem.cs" />
+    <Compile Include="Menus\MenuManager.cs" />
+    <Compile Include="Menus\NavigationMenuItem.cs" />
+    <Compile Include="Menus\RomMenuItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
+    <Compile Include="Rom.cs" />
+    <Compile Include="Menus\RomMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
